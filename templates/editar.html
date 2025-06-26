@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editar Música</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>✏️ Editar Música</h1>
+    <form method="POST">
+        Nome: <input type="text" name="nome" value="{{ musica.nome }}" required><br>
+        Cantor: <input type="text" name="cantor" value="{{ musica.cantor }}" required><br>
+        Duração (min): <input type="number" step="0.1" name="duracao" value="{{ musica.duracao }}" required><br>
+        <input type="submit" value="Atualizar">
+    </form>
+    <a href="{{ url_for('index') }}">⬅ Voltar</a>
+</body>
+</html>
